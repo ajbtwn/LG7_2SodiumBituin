@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo-classes</title>
+
+    <meta charset="UTF-8">
+	<meta name="author" content="Alyssa Bituin">
+	<meta name="keywords" content="pseudo-class">
+	<meta name="revised" content="01-12-2021">
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            padding:20px;
+            float:left;
+            margin-right:10px;
+        }
+
+        a.link1:link {
+            color:rgb(45, 45, 95);
+            background-color: sandybrown;
+       }
+       a.link1:visited{
+            color:sandybrown;
+            background-color: rgb(45, 45, 95);
+       }
+       a.link1:hover{
+           color:rgb(143, 197, 248);
+           background-color:rgb(148, 80, 21);
+       }
+       a.link1:active{
+           color:rgb(148, 80, 21);
+           background-color: rgb(143, 197, 248);
+       }
+
+       a.link2:link {
+            color:rgb(88, 28, 88);
+            background-color: rgb(125, 197, 156);
+       }
+       a.link2:visited{
+           color:rgb(125, 197, 156);
+           background-color: rgb(88, 28, 88);
+       }
+       a.link2:hover{
+            color:rgb(184, 102, 184);
+            background-color: rgb(47, 73, 58);
+       }
+       a.link2:active{
+            color:rgb(47, 73, 58);
+            background-color: rgb(184, 102, 184);
+       }
+
+       div{
+           border:1px solid black;
+           float:left;
+           clear:left;
+           margin-top:20px;
+           width:500px;
+           padding:20px;
+       }
+
+       #div1:target{
+           color: rgb(45, 45, 95);
+           background-color: sandybrown;
+       }
+
+       #div2:target{
+           border:10px dotted green;
+           color:rgb(88, 28, 88);
+           background-color: rgb(125, 197, 156);
+       }
+    </style>
+</head>
+<body>
+    <a class="link1" href="#div1">Jump to content 1</a>
+    <a class="link2" href="#div2">Jump to content 2</a>
+
+    <div id="div1">
+        <p>Content 1</p>
+    </div>
+
+    <div id="div2">
+        <p>Content 2</p>
+    </div>
+</body>
+</html>
